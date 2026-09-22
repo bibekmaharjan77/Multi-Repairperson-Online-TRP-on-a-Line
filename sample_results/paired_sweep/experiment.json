@@ -1,0 +1,25 @@
+{
+  "repairpersons": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "requests": 100,
+  "length": 100.0,
+  "arrival_horizon": 100,
+  "trials": 10,
+  "seed": 7,
+  "pattern": "uniform",
+  "exact": false,
+  "plot": true,
+  "out": "sample_results/paired_sweep",
+  "python": "3.12.14",
+  "domain": [
+    0,
+    100.0
+  ],
+  "idle_policy": "continuous_patrol_from_time_zero",
+  "boundary_policy": "time_preserving_endpoint_projection"
+}

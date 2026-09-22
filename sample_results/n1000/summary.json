@@ -1,0 +1,78 @@
+{
+  "configuration": {
+    "length": 100.0,
+    "repairpersons": 3,
+    "origin": 0,
+    "domain": [
+      0,
+      100.0
+    ],
+    "speed_when_moving": 1,
+    "idle_policy": "continuous_patrol_from_time_zero",
+    "boundary_policy": "time_preserving_endpoint_projection",
+    "alpha": 0.16666666666666666,
+    "beta": 0.4166666666666667,
+    "algorithm": "Algorithm 2 half-line",
+    "corresponding_even_full_line_k": 6
+  },
+  "experiment": {
+    "input": "generated",
+    "pattern": "uniform",
+    "seed": 7,
+    "arrival_horizon": 100,
+    "exact_limit": 10,
+    "python": "3.12.14",
+    "trajectory_recording": false
+  },
+  "metrics": {
+    "domain": "[0, length]",
+    "length": 100.0,
+    "repairpersons": 3,
+    "corresponding_even_full_line_k": 6,
+    "requests": 1000,
+    "total_completion_time": 89304.60160107506,
+    "mean_completion_time": 89.30460160107506,
+    "total_flow_time": 39676.60160107506,
+    "mean_flow_time": 39.67660160107506,
+    "max_flow_time": 138.29369200364033,
+    "makespan": 142.32070925949537,
+    "total_distance_until_last_completion": 426.9621277784861,
+    "sum_individual_lower_bounds": 65661.40825358099,
+    "online_over_lower_bound": 1.3600774637087476,
+    "max_request_over_lower_bound": 1.9664507155617892,
+    "mean_request_over_lower_bound": 1.3600765198788103,
+    "zero_lower_bound_requests": 0,
+    "paper_claimed_halfline_bound": 2,
+    "paper_bound_check_applicable": true,
+    "observed_bound_violation": false,
+    "computed_trajectory_legs": 51,
+    "offline_status": "not computed: n exceeds exact limit 10",
+    "offline_optimum": null,
+    "empirical_ratio_to_optimum": null
+  },
+  "servers": [
+    {
+      "id": 1,
+      "count": 3,
+      "name": "S1",
+      "role": "inner_round_trip"
+    },
+    {
+      "id": 2,
+      "count": 3,
+      "name": "S2",
+      "role": "middle_partial_trip"
+    },
+    {
+      "id": 3,
+      "count": 3,
+      "name": "S3",
+      "role": "outer_partial_trip"
+    }
+  ],
+  "distance_by_server": {
+    "1": 142.32070925949537,
+    "2": 142.32070925949537,
+    "3": 142.32070925949537
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "configuration": {
+    "length": 10.0,
+    "repairpersons": 2,
+    "origin": 0,
+    "domain": [
+      0,
+      10.0
+    ],
+    "speed_when_moving": 1,
+    "idle_policy": "continuous_patrol_from_time_zero",
+    "boundary_policy": "time_preserving_endpoint_projection",
+    "alpha": 0.2857142857142857,
+    "beta": 0.7142857142857143,
+    "algorithm": "Algorithm 2 half-line",
+    "corresponding_even_full_line_k": 4
+  },
+  "experiment": {
+    "input": "examples/requests.csv",
+    "pattern": null,
+    "seed": null,
+    "arrival_horizon": null,
+    "exact_limit": 10,
+    "python": "3.12.14",
+    "trajectory_recording": true
+  },
+  "metrics": {
+    "domain": "[0, length]",
+    "length": 10.0,
+    "repairpersons": 2,
+    "corresponding_even_full_line_k": 4,
+    "requests": 8,
+    "total_completion_time": 59.64285714285714,
+    "mean_completion_time": 7.455357142857142,
+    "total_flow_time": 19.64285714285714,
+    "mean_flow_time": 2.4553571428571423,
+    "max_flow_time": 6.571428571428569,
+    "makespan": 18.57142857142857,
+    "total_distance_until_last_completion": 37.14285714285714,
+    "sum_individual_lower_bounds": 42.0,
+    "online_over_lower_bound": 1.4200680272108843,
+    "max_request_over_lower_bound": 1.6326530612244898,
+    "mean_request_over_lower_bound": 1.3252125850340135,
+    "zero_lower_bound_requests": 0,
+    "paper_claimed_halfline_bound": 2.142857142857143,
+    "paper_bound_check_applicable": true,
+    "observed_bound_violation": false,
+    "computed_trajectory_legs": 21,
+    "offline_status": "exact (floating-point arithmetic)",
+    "offline_optimum": 42.0,
+    "empirical_ratio_to_optimum": 1.4200680272108843
+  },
+  "servers": [
+    {
+      "id": 1,
+      "count": 2,
+      "name": "S1",
+      "role": "inner_round_trip"
+    },
+    {
+      "id": 2,
+      "count": 2,
+      "name": "S2",
+      "role": "outer_partial_trip"
+    }
+  ],
+  "distance_by_server": {
+    "1": 18.57142857142857,
+    "2": 18.57142857142857
+  },
+  "offline_solution": {
+    "total_completion_time": 42.0,
+    "routes": [
+      [
+        0,
+        3,
+        4,
+        7
+      ],
+      [
+        1,
+        2,
+        5,
+        6
+      ]
+    ],
+    "completion_times": {
+      "0": 1.0,
+      "3": 4.0,
+      "4": 5.0,
+      "7": 12.0,
+      "1": 1.0,
+      "2": 2.0,
+      "5": 7.0,
+      "6": 10.0
+    },
+    "retained_labels": 1418,
+    "method": "pareto_routes_and_subset_partition"
+  }
+}
