@@ -20,19 +20,19 @@ from reporting import write_run, print_metrics, plot_run, plot_request_timeline,
 
 # Input: a positive number. Sets the endpoint; 10 means the physical interval [0, 10].
 # length = 10
-length = 10000
+length = 100
 # Input: a whole number of at least 1. Sets how many repairpersons work on this one half-line.
-repairpersons = 6
+repairpersons = 3
 # Input: a whole number of at least 0. Sets the request count when generating requests.
 # request_count = 8
-request_count = 10000000
+request_count = 1000000
 # Input: a whole number of at least 0. Sets the last possible generated integer release time starting from 0
-arrival_horizon = 10000
+arrival_horizon = 100
 # Input: a pattern name as text. Selects uniform positions and releases for generated requests.
 pattern = "uniform"
 # pattern = "half_grid" #this creates requests like at 0, 0.5, 1.0, 1.5, ... up to length
 # Input: a whole number. Makes generated requests repeatable when all generation settings match.
-seed = 9
+seed = 19
 # Input: a CSV filename as text, or "". A filename reads that file; "" generates requests instead.
 # input_csv = "examples/requests.csv"
 input_csv = ""
@@ -48,7 +48,9 @@ save_trajectories = False
 make_plot = False
 # Input: a folder name as text. Sets where this run saves its output files.
 # output_folder = "results/beginner_m2"
-output_folder = "results/uniform_L10000_m6_n10000000_seed9"
+# output_folder = "results/uniform_L10000_m6_n10000000_seed9"
+output_folder = f"results/paper_L100_m3/seed_{seed}"
+
 
 # CHECK THE SETTINGS THAT CONTROL THIS STARTING FILE.
 
